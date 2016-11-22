@@ -31,15 +31,15 @@ int main(void) {
 	int count = 0;
 	byte_t byte = 0;
 
-	while (!feof(ls)) {
-		byte = getc(ls);
-		putc(byte, out);
+	int c = 0;
+	while ((c=getc(ls))!=EOF) {
+		putc(c, out);
 		count++;
 	}
 
-	while (!feof(ts)) {
-		byte = getc(ts);
-		putc(byte, out);
+	c = 0;
+	while ((c=getc(ts))!=EOF) {
+		putc(c, out);
 		count++;
 	}
 	
